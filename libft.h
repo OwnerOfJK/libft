@@ -6,7 +6,7 @@
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 15:23:30 by jkaller           #+#    #+#             */
-/*   Updated: 2023/11/24 16:11:34 by jkaller          ###   ########.fr       */
+/*   Updated: 2024/05/20 18:54:53 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
+# include "get_next_line.h"
+# include "printf_utils/printf.h"
 
 //Function Protoypes
 int		ft_isascii(int c);
@@ -70,5 +72,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 void	*ft_calloc(size_t count, size_t size);
+char	*get_next_line(int fd);
 
 #endif

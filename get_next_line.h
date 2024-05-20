@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 14:16:29 by jkaller           #+#    #+#             */
-/*   Updated: 2023/12/17 15:23:03 by jkaller          ###   ########.fr       */
+/*   Updated: 2024/05/20 18:52:34 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,5 @@
 # define MAX_FD 10240
 
 # include <stddef.h>
-
-char		*get_next_line(int fd);
-char		*ft_strjoin(char *s1, char *s2);
-int			ft_strlen(char const *str);
-char		*ft_strdup(char *str);
-char		*ft_strchr(char *s, int c);
-char		*ft_strncpy(char *dest, const char *src, int len);
-char		*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

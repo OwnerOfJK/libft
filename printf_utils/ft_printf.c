@@ -6,7 +6,7 @@
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 17:47:12 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/20 14:29:57 by jkaller          ###   ########.fr       */
+/*   Updated: 2024/05/20 18:59:07 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,23 @@ int	print(char c, va_list args)
 
 	count = 0;
 	if (c == 'c')
-		count = ft_putchar(va_arg(args, int));
+		count = ft_putchar_print(va_arg(args, int));
 	else if (c == 's')
-		count = ft_putstr(va_arg(args, char *));
+		count = ft_putstr_print(va_arg(args, char *));
 	else if (c == 'p')
-		count = ft_putptr((unsigned long)va_arg(args, void *));
+		count = ft_putptr_print((unsigned long)va_arg(args, void *));
 	else if (c == 'i' || c == 'd')
-		count = ft_putnbr(va_arg(args, int));
+		count = ft_putnbr_print(va_arg(args, int));
 	else if (c == 'u')
-		count = ft_putunbr(va_arg(args, unsigned int));
+		count = ft_putunbr_print(va_arg(args, unsigned int));
 	else if (c == 'x')
-		count = ft_lower_puthexa(va_arg(args, unsigned int));
+		count = ft_lower_puthexa_print(va_arg(args, unsigned int));
 	else if (c == 'X')
-		count = ft_upper_puthexa(va_arg(args, unsigned int));
+		count = ft_upper_puthexa_print(va_arg(args, unsigned int));
 	else if (c == '%')
-		count = ft_putchar(c);
+		count = ft_putchar_print(c);
 	else
-		count = ft_putchar(va_arg(args, int));
+		count = ft_putchar_print(va_arg(args, int));
 	return (count);
 }
 
@@ -50,7 +50,7 @@ int	ft_printf(const char *format, ...)
 
 	i = 0;
 	result = 0;
-	format_len = ft_strlen(format);
+	format_len = ft_strlen_print(format);
 	va_start(args, format);
 	if (!format)
 		return (-1);
@@ -64,7 +64,7 @@ int	ft_printf(const char *format, ...)
 				return (result + format_len);
 			i += 2;
 		}
-		ft_putchar(format[i]);
+		ft_putchar_print(format[i]);
 		i++;
 	}
 	return (result + format_len);

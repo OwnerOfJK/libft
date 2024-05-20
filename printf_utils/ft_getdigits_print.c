@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putunbr.c                                       :+:      :+:    :+:   */
+/*   ft_getdigits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 12:37:41 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/20 14:30:15 by jkaller          ###   ########.fr       */
+/*   Created: 2023/11/27 12:10:17 by jkaller           #+#    #+#             */
+/*   Updated: 2024/05/20 18:56:41 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include <stdio.h>
 
-int	ft_putunbr(unsigned long n)
+size_t	ft_getdigits_print(long n, int base)
 {
-	int	count;
+	size_t	digits;
 
-	count = 0;
-	if (n >= 10)
-		count += ft_putunbr(n / 10);
-	count += ft_putchar('0' + (n % 10));
-	return (count);
+	digits = 0;
+	if (n == 0)
+		return (1);
+	while (n != 0)
+	{
+		digits += 1;
+		n /= base;
+	}
+	return (digits);
 }

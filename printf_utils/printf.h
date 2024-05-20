@@ -16,13 +16,13 @@
 # include <stdio.h>
 
 int		ft_printf(const char *format, ...);
-int		ft_putchar(char c);
-int		ft_lower_puthexa(long nbr);
-int		ft_upper_puthexa(long nbr);
-int		ft_putstr(char *s);
-int		ft_putptr(unsigned long n);
-int		ft_putnbr(long n);
-int		ft_putunbr(unsigned long n);
-int		ft_strlen(char const *str);
+int		ft_putchar_print(char c);
+int		ft_lower_puthexa_print(long nbr);
+int		ft_upper_puthexa_print(long nbr);
+int		ft_putstr_print(char *s);
+int		ft_putptr_print(unsigned long n);
+int		ft_putnbr_print(long n);
+int		ft_putunbr_print(unsigned long n);
+int		ft_strlen_print(char const *str);
 
 #endif

@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getdigits.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_print.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 12:10:17 by jkaller           #+#    #+#             */
-/*   Updated: 2023/11/27 15:36:07 by jkaller          ###   ########.fr       */
+/*   Created: 2023/11/27 19:32:19 by jkaller           #+#    #+#             */
+/*   Updated: 2024/05/20 18:58:16 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "printf.h"
 
-size_t	ft_getdigits(long n, int base)
+int	ft_putnbr_print(long n)
 {
-	size_t	digits;
+	int	count;
 
-	digits = 0;
-	if (n == 0)
-		return (1);
-	while (n != 0)
+	count = 0;
+	if (n < 0)
 	{
-		digits += 1;
-		n /= base;
+		count += ft_putchar_print('-');
+		n = -n;
 	}
-	return (digits);
+	if (n < 10)
+		count += ft_putchar_print(n + '0');
+	else
+	{
+		count += ft_putnbr_print(n / 10);
+		count += ft_putchar_print('0' + (n % 10));
+	}
+	return (count);
 }

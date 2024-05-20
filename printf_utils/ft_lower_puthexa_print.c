@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_lower_puthexa_print.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 14:48:00 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/20 14:30:12 by jkaller          ###   ########.fr       */
+/*   Created: 2023/11/27 12:28:40 by jkaller           #+#    #+#             */
+/*   Updated: 2024/05/20 18:58:23 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
+#include <stdbool.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-int	ft_putstr(char *s)
+int	ft_lower_puthexa_print(long nbr)
 {
-	int	i;
+	int					count;
+	static const char	hex_digits[] = "0123456789abcdef";
 
-	i = 0;
-	if (s == NULL)
+	count = 0;
+	if (nbr < 16)
+		count += ft_putchar_print(hex_digits[nbr]);
+	else
 	{
-		ft_putstr("(null)");
-		return (6);
+		count += ft_lower_puthexa_print(nbr / 16);
+		count += ft_putchar_print(hex_digits[nbr % 16]);
 	}
-	while (s[i] != '\0')
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
-	return (i);
+	return (count);
 }
