@@ -6,7 +6,7 @@
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 15:23:30 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/27 21:22:51 by jkaller          ###   ########.fr       */
+/*   Updated: 2024/05/27 23:30:59 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 void	*ft_calloc(size_t count, size_t size);
 char	*get_next_line(int fd);
-char	*ft_strtok(char *str, const char *delim);
+size_t	ft_strcspn(const char *str, const char *delim);
+char	*ft_strtok_r(char *str, const char *delim, char **saveptr);
 
 #endif

@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/17 14:16:29 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/27 22:17:58 by jkaller          ###   ########.fr       */
+/*   Created: 2024/05/27 23:17:49 by jkaller           #+#    #+#             */
+/*   Updated: 2024/05/27 23:32:17 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
-# endif
-# define MAX_FD 10240
+#include "libft.h"
 
-# include <stddef.h>
+size_t	ft_strcspn(const char *str, const char *delim)
+{
+	const char	*s;
+	const char	*d;
 
-#endif
+	s = str;
+	while (*s != '\0')
+	{
+		d = delim;
+		while (*d != '\0')
+		{
+			if (*s == *d)
+				return (s - str);
+			d++;
+		}
+		s++;
+	}
+	return (s - str);
+}
