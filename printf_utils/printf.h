@@ -14,6 +14,11 @@
 # define PRINTF_H
 
 # include <stdio.h>
+# include <stdbool.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <stdarg.h>
 
 int		ft_printf(const char *format, ...);
 int		ft_putchar_print(char c);

@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getdigits_print.c                               :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tiacovel <tiacovel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 12:10:17 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/28 00:23:06 by jkaller          ###   ########.fr       */
+/*   Created: 2023/11/17 17:21:32 by tiacovel          #+#    #+#             */
+/*   Updated: 2023/11/20 14:25:33 by tiacovel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libft.h"
 
-size_t	ft_getdigits_print(long n, int base)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	digits;
-
-	digits = 0;
-	if (n == 0)
-		return (1);
-	while (n != 0)
-	{
-		digits += 1;
-		n /= base;
-	}
-	return (digits);
+	if (!lst)
+		return (NULL);
+	while (lst != NULL && lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

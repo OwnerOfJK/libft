@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getdigits_print.c                               :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tiacovel <tiacovel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 12:10:17 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/28 00:23:06 by jkaller          ###   ########.fr       */
+/*   Created: 2023/11/21 12:30:03 by tiacovel          #+#    #+#             */
+/*   Updated: 2023/11/22 12:04:29 by tiacovel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libft.h"
 
-size_t	ft_getdigits_print(long n, int base)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	size_t	digits;
-
-	digits = 0;
-	if (n == 0)
-		return (1);
-	while (n != 0)
+	if (!f || !lst)
+		return ;
+	while (lst)
 	{
-		digits += 1;
-		n /= base;
+		f(lst->content);
+		lst = lst->next;
 	}
-	return (digits);
 }

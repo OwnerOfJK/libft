@@ -6,13 +6,11 @@
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 22:39:34 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/20 18:58:09 by jkaller          ###   ########.fr       */
+/*   Updated: 2024/05/28 00:22:49 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 static int	put_ptr_char_print(unsigned long n)
 {

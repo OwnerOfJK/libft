@@ -6,14 +6,11 @@
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 21:46:54 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/20 18:57:46 by jkaller          ###   ########.fr       */
+/*   Updated: 2024/05/28 00:22:40 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-#include <stdbool.h>
-#include <stdlib.h>
-#include <stdio.h>
 
 int	ft_upper_puthexa_print(long nbr)
 {

@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getdigits_print.c                               :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tiacovel <tiacovel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 12:10:17 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/28 00:23:06 by jkaller          ###   ########.fr       */
+/*   Created: 2023/11/21 12:27:18 by tiacovel          #+#    #+#             */
+/*   Updated: 2023/11/23 20:05:28 by tiacovel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libft.h"
 
-size_t	ft_getdigits_print(long n, int base)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	size_t	digits;
-
-	digits = 0;
-	if (n == 0)
-		return (1);
-	while (n != 0)
-	{
-		digits += 1;
-		n /= base;
-	}
-	return (digits);
+	if (!lst)
+		return ;
+	if (del)
+		(del)(lst->content);
+	free(lst);
 }

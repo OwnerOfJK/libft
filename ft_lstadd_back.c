@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getdigits_print.c                               :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 12:10:17 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/28 00:23:06 by jkaller          ###   ########.fr       */
+/*   Created: 2023/11/17 12:12:49 by tiacovel          #+#    #+#             */
+/*   Updated: 2024/05/28 00:16:37 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libft.h"
 
-size_t	ft_getdigits_print(long n, int base)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	digits;
+	t_list	*last;
 
-	digits = 0;
-	if (n == 0)
-		return (1);
-	while (n != 0)
+	if (!new)
+		return ;
+	if (!*lst)
 	{
-		digits += 1;
-		n /= base;
+		*lst = new;
+		return ;
 	}
-	return (digits);
+	last = *lst;
+	while (last && last->next)
+		last = last->next;
+	last->next = new;
 }

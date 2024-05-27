@@ -6,14 +6,11 @@
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:28:40 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/20 18:58:23 by jkaller          ###   ########.fr       */
+/*   Updated: 2024/05/28 00:23:03 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-#include <stdbool.h>
-#include <stdlib.h>
-#include <stdio.h>
 
 int	ft_lower_puthexa_print(long nbr)
 {

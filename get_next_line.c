@@ -6,15 +6,10 @@
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 14:16:32 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/20 18:43:18 by jkaller          ###   ########.fr       */
+/*   Updated: 2024/05/28 00:21:11 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stddef.h>
 #include "libft.h"
 
 static char	*delegate_static(char *line)

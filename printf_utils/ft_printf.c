@@ -6,13 +6,10 @@
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 17:47:12 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/20 18:59:07 by jkaller          ###   ########.fr       */
+/*   Updated: 2024/05/28 00:22:57 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdio.h>
 #include "printf.h"
 
 int	print(char c, va_list args)

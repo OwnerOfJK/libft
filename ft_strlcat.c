@@ -6,13 +6,9 @@
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 13:43:52 by jkaller           #+#    #+#             */
-/*   Updated: 2023/11/23 20:57:23 by jkaller          ###   ########.fr       */
+/*   Updated: 2024/05/28 00:21:01 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-#include <unistd.h>
-#include <stdlib.h>
 
 #include "libft.h"
 
