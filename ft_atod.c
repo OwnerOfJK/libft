@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atof.c                                          :+:      :+:    :+:   */
+/*   ft_atod.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaller <jkaller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/27 16:55:25 by jkaller           #+#    #+#             */
-/*   Updated: 2024/05/27 17:13:24 by jkaller          ###   ########.fr       */
+/*   Created: 2024/05/27 21:15:56 by jkaller           #+#    #+#             */
+/*   Updated: 2024/05/27 21:15:58 by jkaller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ double	account_to_decimal(const char *str, int i, double decimal)
 	return (decimal);
 }
 
-double	ft_atof(const char *str)
+double	ft_atod(const char *str)
 {
 	double	num;
 	double	decimal;
